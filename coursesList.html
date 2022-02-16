@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>קורסים</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cherry+Swash'>
+    <link rel="stylesheet" href="./css/navbar.css">
+    
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="module" src="src/coursesList.js"></script>
+
+
+    <!-- ansam added linked  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+    <style>
+        /*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+        .bloc_left_price {
+            color: rgba(0, 107, 107, 255) !important;
+            text-align: center;
+            font-weight: bold;
+            font-size: 150%;
+        }
+
+        .category_block li:hover {
+            background-color: rgba(22, 131, 2, 0.5) !important;
+        }
+
+        .category_block li:hover a {
+            color: #ffffff;
+        }
+
+        .category_block li a {
+            color: #343a40;
+        }
+
+        .add_to_cart_block .price {
+            color: rgba(0, 107, 107, 255) !important;
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+            margin-bottom: 0;
+        }
+
+        .add_to_cart_block .price_discounted {
+            color: #343a40;
+            text-align: center;
+            text-decoration: line-through;
+            font-size: 140%;
+        }
+
+        .product_rassurance {
+            padding: 10px;
+            margin-top: 15px;
+            background: #ffffff;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+        }
+
+        .product_rassurance .list-inline {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .product_rassurance .list-inline li:hover {
+            color: #343a40;
+        }
+
+        .reviews_product .fa-star {
+            color: rgba(0, 107, 107, 255);
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+
+        .container {
+            text-align: right;
+        }
+
+        .categories {
+            background-color: rgba(113, 184, 101, 0.5) !important;
+        }
+
+        .card-title {
+            color: rgba(0, 107, 107, 255) !important;
+        }
+
+
+
+
+
+        .modal-confirm {
+            color: #636363;
+            width: 325px;
+            font-size: 14px;
+        }
+
+        .modal-confirm .modal-content {
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .modal-confirm .modal-header {
+            border-bottom: none;
+            position: relative;
+        }
+
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 26px;
+            margin: 30px 0 -15px;
+        }
+
+        .modal-confirm .form-control,
+        .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px;
+        }
+
+        .modal-confirm .close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+
+        .modal-confirm .modal-footer {
+            border: none;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .modal-confirm .icon-box {
+            color: #fff;
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: -70px;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            z-index: 9;
+            background: forestgreen;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-confirm .icon-box i {
+            font-size: 58px;
+            position: relative;
+            top: 3px;
+        }
+
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: forestgreen;
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border: none;
+        }
+
+        .modal-confirm .btn:hover,
+        .modal-confirm .btn:focus {
+            background: rgba(22, 131, 2, 0.5);
+            outline: none;
+        }
+
+        .modal-body div p {
+            overflow: hidden;
+        }
+
+        .modal-dialog {
+            overflow-y: initial !important
+        }
+
+        .modal-body {
+            height: 80vh;
+            overflow-y: auto;
+        }
+
+
+        .tag {
+            display: inline-block;
+
+            width: auto;
+            height: 38px;
+
+            background-color: #979797;
+            -webkit-border-radius: 3px 4px 4px 3px;
+            -moz-border-radius: 3px 4px 4px 3px;
+            border-radius: 3px 4px 4px 3px;
+
+            border-left: 1px solid #979797;
+
+            /* This makes room for the triangle */
+            margin-left: 19px;
+
+            position: relative;
+
+            color: white;
+            font-weight: 300;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 18px;
+            line-height: 38px;
+
+            padding: 0 10px 0 10px;
+        }
+
+        /* Makes the triangle */
+        .tag:before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: -19px;
+            width: 0;
+            height: 0;
+            border-top: 19px solid transparent;
+            border-bottom: 19px solid transparent;
+            border-right: 19px solid #979797;
+        }
+
+        /* Makes the circle */
+        .tag:after {
+            content: "";
+            background-color: white;
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            display: block;
+            position: absolute;
+            left: -9px;
+            top: 17px;
+        }
+
+        .modal-header .close {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="nav">
+
+
+        <!-- navbar -->
+        <!-- <nav>
+            <a class="nav1" href="./home.html">
+                <div class="logo-image">
+                    <img src="./images/logoooo.png" class="img-fluid">
+                </div>
+            </a>
+
+            <a class="nav2" href="./home.html">בית</a>
+            <a id="n1" class="nav3" href="./coursesList.html">פעילויות</a>
+            <!-- <a id="n2" class="nav4" href="#">ויזואליזציות</a> -->
+
+        <!-- <a class="nav5" href="./login.html">
+                <div class="loginButton">
+                    <img src="./images/loginButton.png" class="img-fluid">
+                </div>
+            </a>
+        </nav> --> -->
+
+    </div>
+
+    <!--===============================================================================================-->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+        <div class="row justify-content-center" style="padding-top:10px;">
+            <h1 style="font-size: xx-large;">פעילויות פתוחות להרשמה</h1>
+        </div>
+
+    <div class="container" style="padding-top: 50px;">
+        <div class="row">
+            <!-- <div class="col-12 col-sm-3">
+                <div class="card align-items-right bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase"><i id="categories"
+                            class="fa fa-list"></i> קטיגוריות</div>
+                    <ul class="list-group category_block collapse navbar-collapse justify-content-end">
+                        <li class="list-group-item"
+                            style="background-color: rgba(113, 184, 101, 0.5); text-decoration: underline;"><a
+                                href="#">הכל</a></li>
+                        <li class="list-group-item"><a href="#">קורסי העצמה/העשרה אישית</a></li>
+                        <li class="list-group-item"><a href="#">הכנה לשוק העבודה</a></li>
+                        <li class="list-group-item"><a href="#">הכשרות תעסוקיות</a></li>
+                        <li class="list-group-item"><a href="#">הכוונה אקדמית</a></li>
+                    </ul>
+                </div> -->
+
+
+            <div class="col-12 col-sm-3">
+                <div class="card align-items-right bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase"><i id="categories"
+                            class="fa fa-list"></i> מתנ"ס אלבטוף</div>
+                    <img src="images/newLogo.png" alt="">
+                </div>
+
+
+
+
+
+
+                <div id="new_course">
+                    <!-- <div class="card bg-light mb-3">
+                        <div class="card-header bg-success text-white text-uppercase">קורסים חדשים</div>
+                        <div class="card-body">
+                            <img class="img-fluid" src="./images/baseball.PNG" />
+                            <h4 class="card-title">קורס כדול סל</h4>
+                            <p class="card-text">הקורס מיועד לבני נוער מגיל 8-14</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block"
+                                        style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                        קרא
+                                        עוד...</p>
+                                </div>
+                                <div class="col">
+                                    <a href="registerCourse.html" class="btn btn-success btn-block">הרשם</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="result" class="row">
+
+                    <!--                                              here                      -->
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--===============================================================================================-->
+
+    <!-- Footer -->
+    <!-- <div id="footer"> </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--===============================================================================================-->
+
+    <!-- Modal HTML -->
+
+    <div id="readMoreModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 id="title_modal1" class="modal-title w-100">קורס שוק ההון</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="first-content" style=" width: 100%; float: left;">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <img id="image_modal1" style="height: 200px;" src="./images/investors.jpg"
+                                    class="img-fluid" alt="">
+                                <div style="text-align: right;">
+                                    <span id="price_modal" class="tag">100₪</span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-7">
+                                <p style="text-align: right;"><strong>פרטי הקורס</strong></p>
+                                <p id="description_modal" style="text-align: right;">אין פרטים</p>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row justify-content-start" style="padding-top:10px;text-align: right;">
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">מיקום הקורס<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-start" style="padding-top:10px;">
+
+                                    <div class="col">
+                                        <input id="location_modal" type="text" class="form-control" value="לא צויין"
+                                            onkeydown="return false"></input>
+                                    </div>
+                                </div>
+
+
+                                <div class="row justify-content-start" style="padding-top:10px;text-align: right;">
+
+                                    <div class="col" style="padding-top:10px; ">
+                                        <label style="font-weight: bold; font-size: 14px;">תאריך התחלה<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">תאריך סיום<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-start" style="padding-top:10px;">
+
+                                    <div class="col">
+                                        <input id="startdate_modal" type="text" class="form-control" value="0000-00-00"
+                                            onkeydown="return false"></input>
+                                    </div>
+
+                                    <div class="col">
+                                        <input id="enddate_modal" type="text" class="form-control" value="0000-00-00"
+                                            onkeydown="return false"></input>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="...">
+                                        <ul class="pager">
+                                            <!-- <li class="previous first-button"><a href="#"><span
+                                                        aria-hidden="true">&larr;</span>הבא</a></li> -->
+                                            <!-- <li class="next disabled second-button"><a href="#">הקודם<span
+                                                        aria-hidden="true">&rarr;</a></li> -->
+                                        </ul>
+                                    </div>
+                                    <script
+                                        src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                                    <script
+                                        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                                </div>
+
+
+                                <div class="row justify-content-start" style="padding-top:10px;text-align: right;">
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">מספר מפגשים<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">מספר שעות לכל מפגש<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-start" style="padding-top:10px;">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="sessions_modal" value="-"
+                                                onkeydown="return false">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">מפגשים</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="hourpersession_modal" value="-"
+                                                onkeydown="return false">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">שעות</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row justify-content-start" style="padding-top:10px;text-align: right;">
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">מין המשתתפים<span
+                                                aria-hidden="true" class="required"></span></label>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-start" style="padding-top:2px;text-align: right;">
+                                    <div class="col">
+                                        <form>
+                                            <input type="radio" id="male" name="gender" value="זכר" disabled>
+                                            <label for="male">זכר</label>
+                                            <input type="radio" id="female" name="gender" value="נקבה" disabled>
+                                            <label for="female">נקבה</label>
+                                            <input type="radio" id="all" name="gender" value="הכול" disabled>
+                                            <label for="female">הכול</label>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-start" style="padding-top:10px;text-align: right;">
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">מגיל<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                    <div class="col" style="padding-top:10px;">
+                                        <label style="font-weight: bold; font-size: 14px;">עד גיל<span
+                                                aria-hidden="true"></span></label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-start" style="padding-top:10px;">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input id="fromage_modal" type="text" class="form-control" value="-"
+                                                onkeydown="return false">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">שנים</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <input id="toage_modal" type="text" class="form-control" value="-"
+                                                onkeydown="return false">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">שנים</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-end">
+                                    <div class="...">
+                                        <ul class="pager">
+                                            <!-- <li class="previous disabled first-button"><a href="#"><span
+                                                        aria-hidden="true">&larr;</span>הבא</a></li> -->
+                                            <!-- <li class="next second-button"><a href="#">הקודם<span
+                                                        aria-hidden="true">&rarr;</a></li> -->
+                                        </ul>
+                                    </div>
+                                    <script
+                                        src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                                    <script
+                                        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                                </div>
+                                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <a id="reg_modal1" style="font-size: 16px;" href="registerCourse.html"
+                                    class="btn btn-success btn-block">הרשם</a>
+                            </div>
+
+                        </div>
+                    </div> 
+
+
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('.first-button').on('click', function () {
+                $('.first-content').animate({ width: "toggle" }, function () {
+                    $('.second-content').animate({ width: "toggle" });
+                    var h = $(".modal-body .second-content p").height();
+                    $(".modal-body").css('height', h + 430 + 'px');
+                    $(".modal-body .second-content p").css('height', h + 'px');
+                });
+            });
+            $('.second-button').on('click', function () {
+                $('.second-content').animate({ width: "toggle" }, function () {
+                    $('.first-content').animate({ width: "toggle" });
+                    var h = $(".modal-body .first-content p").height();
+                    $(".modal-body").css('height', h + 380 + 'px');
+                    $(".modal-body .first-content p").css('height', h + 'px');
+                });
+            });
+        });
+    </script>
+
+
+    <!-- <script> 
+    $(function(){
+      $("#nav").load("nav.html"); 
+    });
+
+    </script>  -->
+
+
+
+
+
+
+
+
+</body>
+
+<div id="footer"> </div>
+
+</html>

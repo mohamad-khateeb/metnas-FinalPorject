@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Lavalamp CSS Menu</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cherry+Swash'>
+    <link rel="stylesheet" href="./css/navbar.css">
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /*
+** Style Simple Ecommerce Theme for Bootstrap 4
+** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
+*/
+        .bloc_left_price {
+            color: rgba(0, 107, 107, 255) !important;
+            text-align: center;
+            font-weight: bold;
+            font-size: 150%;
+        }
+
+        .category_block li:hover {
+            background-color: rgba(22, 131, 2, 0.5) !important;
+        }
+
+        .category_block li:hover a {
+            color: #ffffff;
+        }
+
+        .category_block li a {
+            color: #343a40;
+        }
+
+        .add_to_cart_block .price {
+            color: rgba(0, 107, 107, 255) !important;
+            text-align: center;
+            font-weight: bold;
+            font-size: 200%;
+            margin-bottom: 0;
+        }
+
+        .add_to_cart_block .price_discounted {
+            color: #343a40;
+            text-align: center;
+            text-decoration: line-through;
+            font-size: 140%;
+        }
+
+        .product_rassurance {
+            padding: 10px;
+            margin-top: 15px;
+            background: #ffffff;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+        }
+
+        .product_rassurance .list-inline {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .product_rassurance .list-inline li:hover {
+            color: #343a40;
+        }
+
+        .reviews_product .fa-star {
+            color: rgba(0, 107, 107, 255);
+        }
+
+        .pagination {
+            margin-top: 20px;
+        }
+
+
+        .container {
+            text-align: right;
+        }
+
+        .categories {
+            background-color: rgba(113, 184, 101, 0.5) !important;
+        }
+
+        .card-title {
+            color: rgba(0, 107, 107, 255) !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <div id="nav"> </div>
+    <!-- <nav>
+        <a class="nav1" href="./home.html">
+            <div class="logo-image">
+                <img src="./images/logoooo.png" class="img-fluid">
+            </div>
+        </a>
+
+        <a class="nav2" href="./home.html">בית</a>
+        <a id="n1" class="nav3" href="./coursesList.html">פעילויות</a>
+        <a id="n2" class="nav4" href="#">ויזואליזציות</a>
+
+        <a class="nav5" href="./login.html">
+            <div class="loginButton">
+                <img src="./images/loginButton.png" class="img-fluid">
+            </div>
+        </a>
+    </nav> -->
+
+
+    <!--===============================================================================================-->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <div class="container" style="padding-top: 80px;">
+        <div style="text-align: center; height: 50px;">
+            <a href="AllCourses.html" class="btn btn-success" style="width: 100px; height: 25px; background-color: rgba(0,107,107,255); font-weight: bold; font-size: 12px;">כל הקורסים</a>
+            <a href="#" class="btn btn-success" style="width: 100px; height: 25px; background-color: rgba(0,107,107,255); font-weight: bold; font-size: 12px;">הוסף קורס חדש</a>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                <div class="card align-items-right bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase"><i id="categories"
+                            class="fa fa-list"></i> קטיגוריות</div>
+                    <ul class="list-group category_block collapse navbar-collapse justify-content-end">
+                        <li class="list-group-item"
+                            style="background-color: rgba(113, 184, 101, 0.5); text-decoration: underline;"><a
+                                href="category.html">הכל</a></li>
+                        <li class="list-group-item"><a href="category.html">קורסי העצמה/העשרה אישית</a></li>
+                        <li class="list-group-item"><a href="category.html">הכנה לשוק העבודה</a></li>
+                        <li class="list-group-item"><a href="category.html">הכשרות תעסוקיות</a></li>
+                        <li class="list-group-item"><a href="category.html">הכוונה אקדמית</a></li>
+                    </ul>
+                </div>
+                <div class="card bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase">קורסים חדשים</div>
+                    <div class="card-body">
+                        <img class="img-fluid" src="./images/baseball.PNG" />
+                        <h4 class="card-title">קורס כדול סל</h4>
+                        <p class="card-text">הקורס מיועד לבני נוער מגיל 8-14</p>
+                        <div class="row">
+                            <div class="col">
+                                <p class="btn btn-danger btn-block"
+                                    style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">קרא
+                                    עוד...</p>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/baseball.PNG" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">קורס כדול סל</a></h4>
+                                <p class="card-text">הקורס מיועד לבני נוער מגיל 8-14</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/cake.jfif" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">קורס קונדיטוריה
+                                        ואפייה לבני הנוער</a></h4>
+                                <p class="card-text">הקורס מיועד לבני הנוער שנמצאים במטבח, או שרוצים להיות במטבח</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/read.PNG" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">מועדון קריאה</a></h4>
+                                <p class="card-text">מועדון קריאה לכל הגילאים בחינם</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/makeup.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">קורס איפור</a></h4>
+                                <p class="card-text">הקורס מיועד לנשים אשר רוצות לפרנס את עצמן על ידי לימוד מקצוע חדש
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/investors.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">קורס שוק ההון</a>
+                                </h4>
+                                <p class="card-text">מטרת הקורס לחשוף את המבוגרים למסחר בשוק ההון שהולך והופך לטרנד בקרב
+                                    האוכלוסייה הבוגרת בישראל</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/academic.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title"><a style="color: rgba(0,107,107,255);" href="product.html"
+                                        title="View Product">סדנת ייעוץ אקדמי</a>
+                                </h4>
+                                <p class="card-text">הסדנה מתאימה לכל מי שמעוניין בהכנה והכוונה לימודית תעסוקתית חיונית
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="btn btn-danger btn-block"
+                                            style="background-color: rgba(0,107,107,255);border-color: rgba(0,107,107,255);">
+                                            קרא עוד...</p>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="btn btn-success btn-block">עדכן פרטי קורס</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--===============================================================================================-->
+
+    <!-- Footer -->
+    <div id="footer"> </div>
+    <!-- <footer class="text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3">
+                    <h5>מי אנחנו</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <p class="mb-0">
+                        ניהול והובלת מערך הפעילויות לצעירים ב-4 כפרים מוסלמים: ואדי אל-חמאם (وادي الحمام), עוזייר
+                        (العـُزَيـْر), רומאנה (رُمانة) ורומת אל-הייב (عرب الهـَيـْب)
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                    <h5>עקבו אחרינו</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul style="text-align: right;" class="list-unstyled">
+                        <li><a class="fa fa-facebook" href="https://www.facebook.com/elbatouf.muni/"></a></li>
+                        <li><a class="fa fa-instagram" href=""></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h5 style="text-align: right;">צור איתנו קשר</h5>
+                    <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-home mr-2"></i> מרכז צעירים אלבטוף</li>
+                        <li><i class="fa fa-envelope mr-2"></i> alasm2222@gmail.com</li>
+                        <li><i class="fa fa-phone mr-2"></i> 054-9412150</li>
+                    </ul>
+                </div>
+                <div class="col-12 copyright mt-3">
+                    <p class="float-left">
+                        <a href="#">חזור למעלה</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer> -->
+</body>
+
+</html>

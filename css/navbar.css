@@ -1,0 +1,115 @@
+nav {
+	margin: 0px auto 0;
+	position: absolute;
+	width: 100%;
+	height: 50px;
+    left:0px;
+    text-align: right;
+	background-color: rgba(22, 131, 2, 1);
+	border-radius: 8px;
+	font-size: 0;
+}
+
+nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+    font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+}
+.nav1 {
+	width: 100px;
+}
+.nav2 {
+	width: 110px;
+}
+.nav3 {
+	width: 100px;
+}
+.nav4 {
+	width: 160px;
+}
+.nav5 {
+	width: 120px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 100px;
+	left: 0px;
+	background-color: #e67e22;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 110px;
+	left: 100px;
+	background-color: #e67e22;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 100px;
+	left: 210px;
+	background-color: #e67e22;
+}
+nav .start-portefolio, a:nth-child(4):hover~.animation {
+	width: 160px;
+	left: 310px;
+	background-color: #e67e22;
+}
+nav .start-contact, a:nth-child(5):hover~.animation {
+	width: 120px;
+	left: 470px;
+	background-color: #e67e22;
+}
+
+body {
+	font-size: 12px;
+	font-family: sans-serif;
+}
+h1 {
+	text-align: center;
+	font-size: 30px;
+	color: rgba(0,107,107,255);
+	font-family: 'Cherry Swash', cursive;
+	margin-right: 450px;
+}
+
+span {
+    color: #e67e22;
+}
+
+.logo-image{
+    width: 100px;
+    height: 100px;
+}
+
+.loginButton{
+    width: 80px;
+    height: 80px;
+    margin-right: 980px;
+}
+
+footer {
+	background: #343a40;
+	padding: 25px;
+	font-size: 12px;
+}
+
+footer a {
+	color: #f8f9fa !important
+}
+
+.container {
+	text-align: right;
+}
