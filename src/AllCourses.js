@@ -137,12 +137,15 @@ $(document).ready(function () {
     // delete -----------------------------------------------
     $('body').on('click', '#deletebtn', function () {
         // var id=$("button").val();
+        var result = confirm("Want to delete?");
+        if(result){
         var id = $(this).attr('value');
         const course_doc = deletecourse(id);
         course_doc.then((id) => {
             $(this).closest('tr').remove()
             alert("course deleted! ");
         });
+    }
     });
 
 

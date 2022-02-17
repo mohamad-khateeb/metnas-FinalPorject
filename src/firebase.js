@@ -164,12 +164,15 @@ export async function addCourse(data, files){
   const added=  await (addDoc(ref,data)
   .then((docRef) =>{
       console.log("added to course successfully !");
-       uploadImage(data['photo'],files,docRef.id , data);
-      return true;
+       uploadImage(data['photo'],files,docRef.id , data)
+       .then(()=>{
+        return data;
+       });
+      
   })
   .catch ((error) =>{
       console.log(" error durnig adding course "+ error);
-      return false ;}));
+      return null ;}));
       // console.log("the const added value is :",added);
 
 }
@@ -184,11 +187,11 @@ export async function setCourse(id , url , data){
   const added=  await (setDoc(ref,data)
   .then((docRef) =>{
       console.log("setdoc to course successfully !");
-      return true;
+      return data;
   })
   .catch ((error) =>{
       console.log(" error durnig adding course "+ error);
-      return false ;}));
+      return null ;}));
 
 }
 
@@ -324,15 +327,22 @@ async function uploadImage(image, files,docId , data){
         // Unknown error occurred, inspect error.serverResponse
         break;
     }
-    return false;
+    return null;
   }, 
   () => {
     // Upload completed successfully, now we can get the download URL
      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
       // console.log("4");
       console.log('File available at', downloadURL);
-      setCourse(docId , downloadURL , data );
-      return true ;
+      setCourse(docId , downloadURL , data )
+      .then(function(){
+        return data ;
+
+
+
+      });
+
+      
     });
   }
 
