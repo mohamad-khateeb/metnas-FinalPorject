@@ -72,12 +72,15 @@ $(document).ready(function () {
 
     $('body').on('click', '#deletebtn', function () {
         // var id=$("button").val();
+        var result = confirm("Want to delete?");
+        if(result){
         var id = $(this).attr('value');
         const course_doc = deleteuser(id);
         course_doc.then((id) => {
             $(this).closest('tr').remove()
             alert("user deleted! ");
         });
+    }
     });
 
     

@@ -77,7 +77,15 @@ $(document).ready(function () {
           // }
         //  alert("4");
         var status_course;
-          var status_course =addCourse(dict,files[0]);
+          var status_course =addCourse(dict,files[0])
+          .then((dt)=>{
+
+            console.log("add coursre! yoofeee");
+            $("#addcourse").click();
+            return ;
+
+
+          });
    
           // var status_course =addCourse(dict,files[0]);
           // status_course.then((res)=>{
@@ -92,17 +100,17 @@ $(document).ready(function () {
           //   console.log("8");
           //   return ;
           // });
-          if(status_course){
-            console.log("add coursre! yoofeee");
-            $("#addcourse").click();
-            return ;
-          }
+          // if(status_course){
+          //   console.log("add coursre! yoofeee");
+          //   $("#addcourse").click();
+          //   return ;
+          // }
           // console.log("awaits mama "); return true;
         
         
-          console.log("failed to add course1 ");
-          alert("failed to add course1");
-          console.log("9");
+          // console.log("failed to add course1 ");
+          // alert("failed to add course1");
+          // console.log("9");
         
         
 

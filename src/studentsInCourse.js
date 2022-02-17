@@ -82,6 +82,8 @@ $(document).ready(function () {
 
     $('body').on('click', '#deletebtn', function () {
         // var id=$("button").val();
+        var result = confirm("Want to delete?");
+        if(result){
         var id = $(this).attr('value');
         var arr_waiting = course_data.waiting;
         var index = arr_waiting.indexOf(id);
@@ -94,6 +96,7 @@ $(document).ready(function () {
                 $(this).closest('tr').remove()
                 alert("user deleted! ");
             });
+        }
     });
 
 
